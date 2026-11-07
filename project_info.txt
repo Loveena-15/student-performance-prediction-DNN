@@ -1,0 +1,58 @@
+649 students
+33 attributes
+16 numerical columns
+17 categorical columns
+----------------------------
+The grades are NOT evenly distributed.
+G3 = 11 → 104 students
+G3 = 19 → 2 students
+-------------------------------------
+We still need preprocessing because we have 17 categorical columns.
+sex       → F / M
+school    → GP / MS
+internet  → yes / no
+Mjob      → teacher / health / services / other / at_home
+A neural network cannot directly work with those strings.
+----------------------------------------------------------
+Demographic / personal information
+school
+sex
+age
+address
+famsize
+Pstatus
+#################################
+Parent information
+Medu
+Fedu
+Mjob
+Fjob
+guardian
+##################################
+Academic / study-related information
+studytime
+failures
+schoolsup
+paid
+higher
+#################################
+Social / lifestyle information
+activities
+romantic
+famrel
+freetime
+goout
+Dalc
+Walc
+health
+##############################
+School/travel/support information
+traveltime
+famsup
+internet
+nursery
+#############################
+| G3    | Category 
+| 0–9   | Low 
+| 10–13 | Average 
+| 14–20 | Good 
