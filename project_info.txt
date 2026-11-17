@@ -56,3 +56,20 @@ nursery
 | 0–9   | Low 
 | 10–13 | Average 
 | 14–20 | Good 
+###########################
+DNN architecture
+For the first Dense layer:
+56 inputs × 64 neurons + 64 biases
+= 3,584 + 64
+= 3,648
+Second layer:
+64 × 32 + 32
+= 2,048 + 32
+= 2,080
+Output layer:
+32 × 3 + 3
+= 96 + 3
+= 99
+Total:
+3,648 + 2,080 + 99
+= 5,827
