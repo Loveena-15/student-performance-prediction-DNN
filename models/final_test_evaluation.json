@@ -1,0 +1,107 @@
+{
+  "evaluation": "one_time_reserved_test_set",
+  "dataset": "student-por.csv",
+  "seed": 42,
+  "test_size": 130,
+  "features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "label_order": [
+    "Low",
+    "Average",
+    "Good"
+  ],
+  "metrics": [
+    {
+      "Model": "Logistic Regression",
+      "Test Accuracy": 0.8692307692307693,
+      "Test Macro Precision": 0.867917917917918,
+      "Test Macro Recall": 0.857307090405682,
+      "Test Macro F1": 0.8620306513409962,
+      "Test Low Recall": 0.85
+    },
+    {
+      "Model": "Random Forest",
+      "Test Accuracy": 0.8615384615384616,
+      "Test Macro Precision": 0.891227746233978,
+      "Test Macro Recall": 0.8252317322739858,
+      "Test Macro F1": 0.8495838526798279,
+      "Test Low Recall": 0.8
+    },
+    {
+      "Model": "DNN",
+      "Test Accuracy": 0.823076923076923,
+      "Test Macro Precision": 0.8041613041613043,
+      "Test Macro Recall": 0.8051944143493439,
+      "Test Macro F1": 0.8043244731306348,
+      "Test Low Recall": 0.75
+    }
+  ],
+  "confusion_matrices": {
+    "Logistic Regression": [
+      [
+        17,
+        3,
+        0
+      ],
+      [
+        3,
+        64,
+        4
+      ],
+      [
+        0,
+        7,
+        32
+      ]
+    ],
+    "Random Forest": [
+      [
+        16,
+        4,
+        0
+      ],
+      [
+        2,
+        68,
+        1
+      ],
+      [
+        0,
+        11,
+        28
+      ]
+    ],
+    "DNN": [
+      [
+        15,
+        5,
+        0
+      ],
+      [
+        6,
+        60,
+        5
+      ],
+      [
+        0,
+        7,
+        32
+      ]
+    ]
+  },
+  "model_selection_used_test_set": false,
+  "deployed_model": "DNN",
+  "deployed_model_reason": "Project requires a DNN application; the DNN was selected before test evaluation using validation macro F1."
+}

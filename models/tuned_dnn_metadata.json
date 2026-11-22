@@ -1,0 +1,114 @@
+{
+  "stage": "validation_selected_dnn",
+  "prediction_stage": "after_G2",
+  "selected_features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "numeric_features": [
+    "G1",
+    "G2",
+    "failures",
+    "absences",
+    "studytime",
+    "Fedu",
+    "Medu",
+    "Dalc",
+    "famrel"
+  ],
+  "categorical_features": [
+    "higher",
+    "school",
+    "Mjob"
+  ],
+  "class_names": [
+    "Average",
+    "Good",
+    "Low"
+  ],
+  "seed": 42,
+  "selection_rule": "max_validation_macro_f1_then_low_recall_then_accuracy",
+  "selected_configuration": {
+    "name": "A_baseline",
+    "learning_rate": 0.001,
+    "dropout": 0.2,
+    "weighted": false,
+    "epochs": 44,
+    "val_accuracy": 0.8461538461538461,
+    "val_macro_f1": 0.8167916430862102,
+    "val_low_recall": 0.6875
+  },
+  "all_experiments": [
+    {
+      "name": "A_baseline",
+      "learning_rate": 0.001,
+      "dropout": 0.2,
+      "weighted": false,
+      "epochs": 44,
+      "val_accuracy": 0.8461538461538461,
+      "val_macro_f1": 0.8167916430862102,
+      "val_low_recall": 0.6875
+    },
+    {
+      "name": "B_weighted",
+      "learning_rate": 0.001,
+      "dropout": 0.2,
+      "weighted": true,
+      "epochs": 65,
+      "val_accuracy": 0.7884615384615384,
+      "val_macro_f1": 0.7737189710873921,
+      "val_low_recall": 0.8125
+    },
+    {
+      "name": "C_low_lr",
+      "learning_rate": 0.0005,
+      "dropout": 0.2,
+      "weighted": false,
+      "epochs": 76,
+      "val_accuracy": 0.8461538461538461,
+      "val_macro_f1": 0.8084210142416892,
+      "val_low_recall": 0.625
+    },
+    {
+      "name": "D_low_lr_weighted",
+      "learning_rate": 0.0005,
+      "dropout": 0.2,
+      "weighted": true,
+      "epochs": 100,
+      "val_accuracy": 0.7788461538461539,
+      "val_macro_f1": 0.7639616902866756,
+      "val_low_recall": 0.8125
+    },
+    {
+      "name": "E_high_dropout",
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weighted": false,
+      "epochs": 49,
+      "val_accuracy": 0.8461538461538461,
+      "val_macro_f1": 0.8147828587863101,
+      "val_low_recall": 0.6875
+    },
+    {
+      "name": "F_dropout_weighted",
+      "learning_rate": 0.001,
+      "dropout": 0.3,
+      "weighted": true,
+      "epochs": 52,
+      "val_accuracy": 0.7884615384615384,
+      "val_macro_f1": 0.7710338680926916,
+      "val_low_recall": 0.8125
+    }
+  ],
+  "test_set_evaluated": false
+}

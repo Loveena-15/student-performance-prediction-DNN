@@ -1,0 +1,28 @@
+{
+  "stage": "validation_model_comparison",
+  "dataset": "student-por.csv",
+  "prediction_stage": "after_G2",
+  "seed": 42,
+  "selected_features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "models": [
+    "Logistic Regression",
+    "Random Forest",
+    "DNN"
+  ],
+  "ranking_metric": "validation_macro_f1",
+  "best_validation_macro_f1_model": "DNN",
+  "test_set_evaluated": false
+}

@@ -1,0 +1,113 @@
+{
+  "project": "Student Academic Performance Prediction",
+  "prediction_stage": "after_G2",
+  "model_type": "Deep Neural Network",
+  "selected_features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "numeric_features": [
+    "G1",
+    "G2",
+    "failures",
+    "absences",
+    "studytime",
+    "Fedu",
+    "Medu",
+    "Dalc",
+    "famrel"
+  ],
+  "categorical_features": [
+    "higher",
+    "school",
+    "Mjob"
+  ],
+  "categorical_options_from_training": {
+    "higher": [
+      "no",
+      "yes"
+    ],
+    "school": [
+      "GP",
+      "MS"
+    ],
+    "Mjob": [
+      "at_home",
+      "health",
+      "other",
+      "services",
+      "teacher"
+    ]
+  },
+  "numeric_ranges_from_training": {
+    "G1": {
+      "min": 0.0,
+      "max": 19.0,
+      "integer": true
+    },
+    "G2": {
+      "min": 0.0,
+      "max": 19.0,
+      "integer": true
+    },
+    "failures": {
+      "min": 0.0,
+      "max": 3.0,
+      "integer": true
+    },
+    "absences": {
+      "min": 0.0,
+      "max": 32.0,
+      "integer": true
+    },
+    "studytime": {
+      "min": 1.0,
+      "max": 4.0,
+      "integer": true
+    },
+    "Fedu": {
+      "min": 0.0,
+      "max": 4.0,
+      "integer": true
+    },
+    "Medu": {
+      "min": 0.0,
+      "max": 4.0,
+      "integer": true
+    },
+    "Dalc": {
+      "min": 1.0,
+      "max": 5.0,
+      "integer": true
+    },
+    "famrel": {
+      "min": 1.0,
+      "max": 5.0,
+      "integer": true
+    }
+  },
+  "class_names": [
+    "Average",
+    "Good",
+    "Low"
+  ],
+  "target_definition": {
+    "Low": "G3 0–9",
+    "Average": "G3 10–13",
+    "Good": "G3 14–20"
+  },
+  "dataset_context": "UCI Student Performance, Portuguese-language course",
+  "research_only": true,
+  "selected_using": "validation_macro_f1",
+  "test_set_not_used_for_model_selection": true
+}

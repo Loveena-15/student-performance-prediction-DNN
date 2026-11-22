@@ -1,0 +1,48 @@
+{
+  "model_stage": "initial_dnn_before_tuning",
+  "dataset": "student-por.csv",
+  "seed": 42,
+  "selected_features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "numeric_features": [
+    "G1",
+    "G2",
+    "failures",
+    "absences",
+    "studytime",
+    "Fedu",
+    "Medu",
+    "Dalc",
+    "famrel"
+  ],
+  "categorical_features": [
+    "higher",
+    "school",
+    "Mjob"
+  ],
+  "class_names": [
+    "Average",
+    "Good",
+    "Low"
+  ],
+  "validation_accuracy": 0.8461538461538461,
+  "validation_macro_f1": 0.8167916430862102,
+  "validation_low_recall": 0.6875,
+  "architecture": "64-ReLU / Dropout / 32-ReLU / Dropout / 3-Softmax",
+  "learning_rate": 0.001,
+  "dropout_rate": 0.2,
+  "batch_size": 32,
+  "test_set_evaluated": false
+}

@@ -1,0 +1,27 @@
+{
+  "prediction_stage": "mid_course_after_G2",
+  "dataset": "student-por.csv",
+  "target": "performance_category",
+  "target_source": "G3",
+  "seed": 42,
+  "feature_selection": "training_only_mutual_information",
+  "total_features": 12,
+  "selected_features": [
+    "G1",
+    "G2",
+    "failures",
+    "higher",
+    "absences",
+    "studytime",
+    "school",
+    "Fedu",
+    "Medu",
+    "Mjob",
+    "Dalc",
+    "famrel"
+  ],
+  "split": {
+    "test_size": 0.2,
+    "validation_fraction_of_development": 0.2
+  }
+}
